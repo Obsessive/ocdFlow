@@ -1,0 +1,16 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="settingsLoaded" unloaded="settingsUnLoaded">
+  <ActionBar title="Ink Connect">
+
+  </ActionBar>
+  <StackLayout>
+    <ListView id="settings_id" items="{{ settings_items }}" itemTap="settings_item_tap" separatorColor="#00FFFFFF" >
+      <ListView.itemTemplate>
+        <GridLayout rows="auto,auto" columns="20,*">
+          <Label row="0" col="1" class="font28 blacktext margintop10 marginbottom10" text="{{ settings_item_name }}" />
+          <StackLayout row="1" col="1" class="blackshadebackground border3 height2 opacity75">
+          </StackLayout>
+        </GridLayout>
+      </ListView.itemTemplate>
+    </ListView>
+  </StackLayout>
+</Page>

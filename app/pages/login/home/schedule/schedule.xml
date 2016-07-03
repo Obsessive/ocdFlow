@@ -1,0 +1,17 @@
+<StackLayout class="whitebackground" xmlns="http://schemas.nativescript.org/tns.xsd" loaded="scheduleLoaded" unloaded="scheduleUnLoaded">
+  <ListView id="schedule_id" items="{{ schedule_items }}" itemTap="schedule_item_tap" separatorColor="#00595959" >
+    <ListView.itemTemplate>
+      <GridLayout rows="auto,auto" columns="*">
+        <StackLayout row="0" col="0" class="themebackground opacity90">
+          <Label textWrap="true" text="{{ schedule_item_day_start_time }}" class="whitetext font22 margin5"/>
+        </StackLayout>
+        <GridLayout row="1" col="0" rows="auto,auto" columns="auto,*">
+          <StackLayout row="0" col="0" rowspan="2" class="width5 marginright10 marginleft10 margintop5 marginbottom5 themebackground">
+          </StackLayout>
+          <Label textWrap="true" row="0" col="1" text="{{ schedule_item_title_of_talk }}" class="marginleft5 margintop5 marginright5 blacktext font26" />
+          <Label textWrap="true" row="1" col="1" text="{{ schedule_item_start_to_end_time_location }}" class="marginbottom5 marginleft5 marginright5 graytext font18" />
+        </GridLayout>
+      </GridLayout>
+    </ListView.itemTemplate>
+  </ListView>
+</StackLayout>

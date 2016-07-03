@@ -1,0 +1,29 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="loginLoaded" unloaded="loginUnloaded">
+  <ActionBar title="InkTalks">
+
+  </ActionBar>
+  <GridLayout rows="auto,20,*" columns="*">
+    <Image row="0" col="0" src="~/images/inktalks.png" stretch ="aspectFit" class="positioncenter margin10"/>
+    <GridLayout row="2" col="0" rows="auto,auto,10,auto,auto,*,auto,10" columns="*">
+      <GridLayout row="0" col="0" rows="auto,auto" columns="10,40,auto,*,10">
+        <Label row="0" col="1" text="&#xf007;" class="fontsymbol font34 marginleft10 positioncenter blacktext"/>
+        <StackLayout row="0" col="2" class="blackshadebackground border3 width3 marginleft10 marginright10 margintop5 marginbottom5 opacity75">
+        </StackLayout>
+        <TextField row="0" col="3" hint="Email" id="email_id" class="transparentbackground font22 marginleft5 marginright5 blacktext" keyboardType="email"/>
+        <StackLayout row="1" col="1" colspan="3" class="blackshadebackground border3 height3 opacity75">
+        </StackLayout>
+      </GridLayout>
+      <GridLayout row="1" col="0" rows="auto,auto" columns="10,40,auto,*,10" class="margintop10">
+        <Label row="0" col="1" text="&#xf023;" class="fontsymbol font34 marginleft10 positioncenter blacktext"/>
+        <StackLayout row="0" col="2" class="blackshadebackground border3 width3 marginleft10 marginright10 margintop5 marginbottom5 opacity75">
+        </StackLayout>
+        <TextField row="0" col="3" hint="Password" id="password_id" secure="true" class="transparentbackground font22 marginleft5 marginright5 blacktext"/>
+        <StackLayout row="1" col="1" colspan="3" class="blackshadebackground border3 height3 opacity75">
+        </StackLayout>
+      </GridLayout>
+      <Button row="3" col="0" tap="{{ login_action }}" text="LOGIN" class="margin10 border5 font22 whitetext themebackground"/>
+      <Label row="4" col="0" id="terms_of_use_id" text="Terms Of Use" class="margin10 positioncenter textcenter font18 blacktext"/>
+      <Label row="6" col="0" id="trouble_logging_id" text="Having Trouble Logging in ?" class="margin10 positioncenter textcenter font20 blacktext"/>
+    </GridLayout>
+  </GridLayout>
+</Page>

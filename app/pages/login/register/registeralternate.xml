@@ -1,0 +1,56 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="registeralternateLoaded" unloaded="registeralternateUnLoaded" actionBarHidden="true">
+  <GridLayout rows="*,auto,auto,auto,auto,auto,auto,10,auto" columns="*" class="themebackground">
+    <GridLayout row="0" col="0" rows="*,auto,*" columns="*,auto,*">
+      <Label row="1" col="1" text="Who Might You Be ?" textWrap="true" class="positioncenter font34 whitetext boldtext"/>
+    </GridLayout>
+    <GridLayout row="1" col="0" rows="auto,auto" columns="10,50,auto,*,10">
+      <Label row="0" col="1" text="&#xf007;" class="fontsymbol font34 marginleft10 positioncenter whitetext"/>
+      <StackLayout row="0" col="2" class="whitebackground border3 width3 marginleft10 marginright10 margintop5 marginbottom5 opacity75">
+      </StackLayout>
+      <TextField row="0" col="3" hint="First Name" id="first_name_id" class="transparentbackground font22 marginleft5 marginright5 whitetext"/>
+      <StackLayout row="1" col="1" colspan="3" class="whitebackground border3 height3 opacity75">
+      </StackLayout>
+    </GridLayout>
+    <GridLayout row="2" col="0" rows="auto,auto" columns="10,50,auto,*,10" class="margintop5">
+      <Label row="0" col="1" text="&#xf007;" class="fontsymbol font34 marginleft10 positioncenter whitetext"/>
+      <StackLayout row="0" col="2" class="whitebackground border3 width3 marginleft10 marginright10 margintop5 marginbottom5 opacity75">
+      </StackLayout>
+      <TextField row="0" col="3" hint="Last Name" id="last_name_id" class="transparentbackground font22 marginleft5 marginright5 whitetext"/>
+      <StackLayout row="1" col="1" colspan="3" class="whitebackground border3 height3 opacity75">
+      </StackLayout>
+    </GridLayout>
+    <GridLayout row="3" col="0" rows="auto,auto" columns="10,50,auto,*,10" class="margintop5">
+      <Label row="0" col="1" text="&#xf0e0;" class="fontsymbol font34 marginleft10 positioncenter whitetext"/>
+      <StackLayout row="0" col="2" class="whitebackground border3 width3 marginleft10 marginright10 margintop5 marginbottom5 opacity75">
+      </StackLayout>
+      <TextField row="0" col="3" hint="Email" id="email_id" class="transparentbackground font22 marginleft5 marginright5 whitetext"/>
+      <StackLayout row="1" col="1" colspan="3" class="whitebackground border3 height3 opacity75">
+      </StackLayout>
+    </GridLayout>
+    <GridLayout row="4" col="0" rows="auto,auto" columns="10,50,auto,*,10" class="margintop5">
+      <Label row="0" col="1" text="&#xf023;" class="fontsymbol font34 marginleft10 positioncenter whitetext"/>
+      <StackLayout row="0" col="2" class="whitebackground border3 width3 marginleft10 marginright10 margintop5 marginbottom5 opacity75">
+      </StackLayout>
+      <TextField row="0" col="3" hint="Password" id="password_id" secure="true" class="transparentbackground font22 marginleft5 marginright5 whitetext"/>
+      <StackLayout row="1" col="1" colspan="3" class="whitebackground border3 height3 opacity75">
+      </StackLayout>
+    </GridLayout>
+    <GridLayout row="5" col="0" rows="auto,auto" columns="10,50,auto,*,10" class="margintop5">
+      <Label row="0" col="1" text="&#xf023;" class="fontsymbol font34 marginleft10 positioncenter whitetext"/>
+      <StackLayout row="0" col="2" class="whitebackground border3 width3 marginleft10 marginright10 margintop5 marginbottom5 opacity75">
+      </StackLayout>
+      <TextField row="0" col="3" hint="Retype Password" id="retype_password_id" secure="true" class="transparentbackground font22 marginleft5 marginright5 whitetext"/>
+      <StackLayout row="1" col="1" colspan="3" class="whitebackground border3 height3 opacity75">
+      </StackLayout>
+    </GridLayout>
+    <GridLayout row="6" col="0" rows="auto,auto" columns="10,50,auto,*,10" class="margintop5">
+      <Label row="0" col="1" text="&#xf10b;" class="fontsymbol font34 marginleft10 positioncenter whitetext"/>
+      <StackLayout row="0" col="2" class="whitebackground border3 width3 marginleft10 marginright10 margintop5 marginbottom5 opacity75">
+      </StackLayout>
+      <TextField row="0" col="3" hint="Phone Number" id="phone_number_id" class="transparentbackground font22 marginleft5 marginright5 whitetext"/>
+      <StackLayout row="1" col="1" colspan="3" class="whitebackground border3 height3 opacity75">
+      </StackLayout>
+    </GridLayout>
+    <Button row="8" col="0" tap="{{ register_action }}" text="REGISTER" class="margin10 border5 font22 whitebackground themetext"/>
+  </GridLayout>
+</Page>

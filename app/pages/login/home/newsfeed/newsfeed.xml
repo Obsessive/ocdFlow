@@ -1,0 +1,25 @@
+<StackLayout xmlns="http://schemas.nativescript.org/tns.xsd" xmlns:nativescript-fresco="nativescript-fresco" xmlns:collapsingHeader="nativescript-collapsing-header" xmlns:Slides="nativescript-slides" xmlns:td="nativescript-textdrawable" loaded="newsfeedLoaded" unloaded="newsfeedUnLoaded">
+  <collapsingHeader:CollapsingHeader>
+    <collapsingHeader:Header class="header-template" id="header_id" >
+      <GridLayout rows="auto" columns="*">
+        <Slides:SlideContainer id="slider_id" row="0" col="0" loaded="slideLoaded">
+
+        </Slides:SlideContainer>
+      </GridLayout>
+    </collapsingHeader:Header>
+    <ListView id="news_feed_id" items="{{ news_feed_items }}" itemTap="news_feed_item_tap" separatorColor="#00FFFFFF">
+      <ListView.itemTemplate>
+        <StackLayout class="graybackground">
+          <GridLayout rows="10,auto" columns="auto,*" class="whitebackground margin5 border5">
+            <td:TextDrawable row="1" col="0" width="50" height="50" text="{{ news_feed_item_speaker_icon }}" textColor="white" toUpperCase="true" type="roundRect" bgColor="#21409A" class="marginleft10 marginright10 verticaltop horizontalcenter"/>
+            <GridLayout row="1" col="1" rows="auto,auto,auto" columns="*">
+              <Label textWrap="true" row="0" col="0" class="boldtext blacktext font18 verticaltop" text="{{ news_feed_item_speaker_name }}" />
+              <Label textWrap="true" row="1" col="0" class="graytext font14" text="{{ news_feed_item_day_time }}" />
+              <Label textWrap="true" row="2" col="0" class="blacktext font22 marginbottom10 marginright10" text="{{ news_feed_item_content }}" />
+            </GridLayout>
+          </GridLayout>
+        </StackLayout>
+      </ListView.itemTemplate>
+    </ListView>
+  </collapsingHeader:CollapsingHeader>
+</StackLayout>

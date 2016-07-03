@@ -1,0 +1,18 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="registerLoaded" unloaded="registerUnLoaded" actionBarHidden="true">
+  <GridLayout rows="30,*,30,auto,auto,auto,auto,auto,auto,10,auto" columns="*">
+    <StackLayout row="0" col="0" class="themebackground">
+    </StackLayout>
+    <GridLayout row="1" col="0" rows="*,auto,*" columns="*,auto,*" class="themebackground">
+      <Label row="1" col="1" text="Who Might You Be ?" textWrap="true" class="positioncenter font34 whitetext boldtext"/>
+    </GridLayout>
+    <StackLayout row="2" col="0" class="themebackground">
+    </StackLayout>
+    <TextField row="3" col="0" hint="First Name" id="first_name_id" class="font22 margintop10 marginleft10 marginright10 blacktext"/>
+    <TextField row="4" col="0" hint="Last Name" id="last_name_id" class="font22 margintop10 marginleft10 marginright10 blacktext"/>
+    <TextField row="5" col="0" hint="Email" id="email_id" class="font22 margintop10 marginleft10 marginright10 blacktext" keyboardType="email"/>
+    <TextField row="6" col="0" hint="Password" id="password_id" secure="true" class="font22 margintop10 marginleft10 marginright10 blacktext"/>
+    <TextField row="7" col="0" hint="Retype Password" id="retype_password_id" secure="true" class="font22 margintop10 marginleft10 marginright10 blacktext"/>
+    <TextField row="8" col="0" hint="Phone Number" id="phone_number_id" class="font22 margintop10 marginleft10 marginright10 blacktext" keyboardType="phone"/>
+    <Button row="10" col="0" tap="{{ register_action }}" text="REGISTER" class="margin10 border5 font22 whitetext themebackground"/>
+  </GridLayout>
+</Page>

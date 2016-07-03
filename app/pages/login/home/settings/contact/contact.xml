@@ -1,0 +1,5 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="contactLoaded" unloaded="contactUnLoaded">
+  <ActionBar title="Ink Connect">
+
+  </ActionBar>
+</Page>
