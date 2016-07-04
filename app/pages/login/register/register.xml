@@ -3,7 +3,7 @@
     <StackLayout row="0" col="0" class="themebackground">
     </StackLayout>
     <GridLayout row="1" col="0" rows="*,auto,*" columns="*,auto,*" class="themebackground">
-      <Label row="1" col="1" text="Who Might You Be ?" textWrap="true" class="positioncenter font34 whitetext boldtext"/>
+      <Label row="1" col="1" text="Who Might You Be ?" textWrap="true" class="font-helvetica positioncenter font34 whitetext boldtext"/>
     </GridLayout>
     <StackLayout row="2" col="0" class="themebackground">
     </StackLayout>

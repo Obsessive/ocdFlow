@@ -2,7 +2,7 @@
   <collapsingHeader:CollapsingHeader>
     <collapsingHeader:Header class="header-template" id="header_id" >
       <GridLayout rows="auto" columns="*">
-        <Slides:SlideContainer id="slider_id" row="0" col="0" loaded="slideLoaded">
+        <Slides:SlideContainer id="slider_id" row="0" col="0" loaded="slideLoaded" changed="onChanged">
 
         </Slides:SlideContainer>
       </GridLayout>

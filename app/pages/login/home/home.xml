@@ -2,24 +2,24 @@
   <ActionBar title="Ink Connect">
     <ActionItem tap="settings_action" icon="~/images/ic_settings_white_36dp.png" android.position="actionBar"></ActionItem>
   </ActionBar>
-  <TabView class="whitetext" id="tab_view_id" selectedColor="#FFFFFF" tabsBackgroundColor="#21409A">
+  <TabView class="whitetext fontsymbol font20" id="tab_view_id" selectedColor="#FFFFFF" tabsBackgroundColor="#21409A">
     <TabView.items>
-      <TabViewItem title="" style="font-size:20" iconSource="~/images/News-96.png" xmlns:NewsFeedTab="pages/login/home/newsfeed">
+      <TabViewItem title="&#xf1ea;" class="" xmlns:NewsFeedTab="pages/login/home/newsfeed">
         <TabViewItem.view>
           <NewsFeedTab:newsfeed />
         </TabViewItem.view>
       </TabViewItem>
-      <TabViewItem iconSource="~/images/Planner-96.png" xmlns:ScheduleTab="pages/login/home/schedule">
+      <TabViewItem title="&#xf073;" class="" xmlns:ScheduleTab="pages/login/home/schedule">
         <TabViewItem.view>
           <ScheduleTab:schedule/>
         </TabViewItem.view>
       </TabViewItem>
-      <TabViewItem title="" iconSource="~/images/Chat-96.png" xmlns:ChatTab="pages/login/home/chat">
+      <TabViewItem title="&#xf086;" class="" xmlns:ChatTab="pages/login/home/chat">
         <TabViewItem.view>
           <ChatTab:chat/>
         </TabViewItem.view>
       </TabViewItem>
-      <TabViewItem title="" iconSource="~/images/PodiumWithSpeaker-96.png" xmlns:SpeakersTab="pages/login/home/speakers">
+      <TabViewItem title="&#xf0c0;" class="" xmlns:SpeakersTab="pages/login/home/speakers">
         <TabViewItem.view>
           <SpeakersTab:speakers/>
         </TabViewItem.view>

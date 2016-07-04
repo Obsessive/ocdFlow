@@ -27,6 +27,12 @@ function newsfeedLoaded(args) {
 
     newsfeedModel.prototype.setup_ui = function () {
       console.log("setup_ui is activated");
+      //Required for slides
+      page.getViewById("slider_id").interval = "5000";
+      page.getViewById("slider_id").startSlideshow();
+
+      //test
+      //page.getViewById("header_id").constructView();
     };
 
     newsfeedModel.prototype.newsfeed_dummy_content = function () {
@@ -95,9 +101,13 @@ exports.slideLoaded = function(args){
       slide.addChild(image);
       slideContainer.addChild(slide);
     }
+    slideContainer.loop = "true";
+    slideContainer.disablePan = "true";
   }
-  slideContainer.interval = "2000";
-  slideContainer.loop = "true";
-  slideContainer.disablePan = "true";
   console.log(slideContainer._childrenCount);
 };
+
+exports.onChanged = function(args){
+	var data = args.eventData;
+	console.log("Changed: " + JSON.stringify(data));
+}

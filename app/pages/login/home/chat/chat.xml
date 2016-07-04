@@ -8,15 +8,15 @@
         </StackLayout>
         <td:TextDrawable row="1" col="0" width="65" height="65" text="{{ chat_item_icon_text }}" textColor="white" toUpperCase="true" type="round" bgColor="#21409A" class="marginleft10 marginright10 verticaltop horizontalcenter"/>
         <GridLayout rows="auto,auto,auto" columns="*" row="1" col="1" class="whitebackground border5 marginright5">
-          <Label id="chat_item_name_id" textWrap="true" row="0" col="0" text="{{ chat_item_name }}" class="marginleft5 graytext font14 horizontalleft verticaltop margintop5" />
-          <Label id="chat_item_content_id" textWrap="true" row="1" col="0" text="{{ chat_item_content }}" class="margin5 blacktext font24" />
-          <Label id="chat_item_date_day_id" textWrap="true" row="2" col="0" text="{{ chat_item_date_day }}" class="graytext font10 horizontalright verticalbottom marginright5 marginbottom5" />
+          <Label id="chat_item_name_id" textWrap="true" row="0" col="0" text="{{ chat_item_name }}" class="marginleft5 graytext font14 horizontalleft verticaltop margintop5 font-helvetica" />
+          <Label id="chat_item_content_id" textWrap="true" row="1" col="0" text="{{ chat_item_content }}" class="margin5 blacktext font24 font-helvetica" />
+          <Label id="chat_item_date_day_id" textWrap="true" row="2" col="0" text="{{ chat_item_date_day }}" class="graytext font10 horizontalright verticalbottom marginright5 marginbottom5 font-helvetica" />
         </GridLayout>
       </GridLayout>
     </ListView.itemTemplate>
   </ListView>
   <GridLayout row="1" col="0" rows="auto" columns="*,auto">
-    <TextView row="0" col="0" hint="Type a message" id="chat_message_id" class="font22 marginleft10 whitebackground border5 blacktext verticalcenter"/>
+    <TextView row="0" col="0" hint="Type a message" id="chat_message_id" class="font24 marginleft10 whitebackground border5 blacktext verticalcenter"/>
     <Button row="0" col="1" id="send_message_id" tap="{{ send_action }}" width="60" height="60" text="&#xf1d8;" class="marginbottom10 marginright10 margintop10 marginleft10 border50 fontsymbol textcenter whitetext themebackground font24"/>
   </GridLayout>
 </GridLayout>
