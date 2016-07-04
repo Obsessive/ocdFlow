@@ -14,6 +14,15 @@ ActionBar{
     width: 100%;
 }
 
+.test{
+  height: 150;
+  width: 100%;
+}
+
+.font64{
+  font: 64;
+}
+
 /*alignments*/
 
 .horizontalright{
@@ -83,6 +92,10 @@ ActionBar{
 
 .graybackground{
   background-color: #CECECE;
+}
+
+.imagegraybackground{
+  background-color: #DFE0E1;
 }
 
 /*margins*/
@@ -162,8 +175,16 @@ ActionBar{
 
 /*text color*/
 
+.imagegraytext{
+  color: #BBBCBF;
+}
+
 .themetext{
   color: #21409A;
+}
+
+.twittertext{
+  color: #4099FF;
 }
 
 .whitetext{

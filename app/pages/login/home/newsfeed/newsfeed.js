@@ -5,14 +5,24 @@ var observableArray = require("data/observable-array");
 var applicationprofile = require("application-settings");
 var animate = require("ui/animation");
 var utilities = require("utils/utils");
-var Fresco = require("nativescript-fresco");
+var imageCache = require("nativescript-web-image-cache");
 var Slides = require("nativescript-slides/nativescript-slides");
-var page,self;
-var imageuris = [
+var imageCacheModule = require("ui/image-cache");
+var imageSource = require("image-source");
+var ImageModule = require("ui/image");
+var enumsModule = require("ui/enums");
+var page,self,currentSlide=0;
+var imageurissample = [
   "http://i4g.gr/w/wp-content/uploads/2015/06/aws.png",
   "http://www.ishafoundation.org/templates/isha/homeslider/About-us-Sadhguru.jpg",
   "http://newyorkdigit.com/wp-content/uploads/2015/08/google-alphabet-inc.jpg",
   "http://www.designfinder.net/uploads/gallery/design-business-card-506.jpg"
+];
+var imageuris = [
+  "~/images/aws.png",
+  "~/images/About-us-Sadhguru.jpg",
+  "~/images/google-alphabet-inc.jpg",
+  "~/images/design-business-card-506.jpg"
 ];
 function newsfeedLoaded(args) {
   page = args.object;
@@ -75,12 +85,15 @@ exports.newsfeedLoaded = newsfeedLoaded;
 exports.newsfeedUnLoaded = function(){
   console.log("newsfeedUnLoaded is activated");
   page.getViewById("slider_id").stopSlideshow();
+  var cache = new imageCacheModule.Cache();
+  cache.clear();
   utilities.GC();
 };
 
 exports.news_feed_item_tap = function(args){
   console.log('Clicked item with index ' + args.index);
 };
+
 
 exports.slideLoaded = function(args){
   console.log("Loading Slides");
@@ -90,14 +103,10 @@ exports.slideLoaded = function(args){
     for (var i = 0; i < imageuris.length; i++) {
       var slide = new Slides.Slide();
       slide.className = "whitebackground";
-      var image = new Fresco.FrescoDrawee();
-      image.width = "100%";
-      image.height = "150";
-      image.actualImageScaleType = "fitXY";
-      image.placeholderImageUri = "~/images/emptyplaceholder.jpg";
-      image.failureImageUri = "~/images/errorplaceholder.png";
-      image.progressiveRenderingEnabled = "true";
-      image.imageUri = imageuris[i];
+      var image = new ImageModule.Image();
+      image.stretch = enumsModule.Stretch.fill;
+      image.className = "test";
+      image.src = imageuris[i];
       slide.addChild(image);
       slideContainer.addChild(slide);
     }
@@ -107,7 +116,77 @@ exports.slideLoaded = function(args){
   console.log(slideContainer._childrenCount);
 };
 
+//This is what needed but is not working
+// exports.slideLoaded = function(args){
+//   console.log("Loading Slides");
+//   var slideContainer = args.object;
+//   if (slideContainer._childrenCount == 0) {
+//     console.log("right");
+//     for (var i = 0; i < imageuris.length; i++) {
+//       var slide = new Slides.Slide();
+//       slide.className = "whitebackground";
+//       var image = new imageCache.WebImage();
+//       image.stretch = "fill";
+//       image.src = imageuris[i];
+//       slide.addChild(image);
+//       slideContainer.addChild(slide);
+//     }
+//     slideContainer.loop = "true";
+//     slideContainer.disablePan = "true";
+//   }
+//   console.log(slideContainer._childrenCount);
+// };
+
+
+//This works but too slow only loaded one image in 10mins
+// exports.slideLoaded = function(args){
+//   console.log("Loading Slides");
+//   console.log(__dirname);
+//   var slideContainer = args.object;
+//   if (slideContainer._childrenCount == 0) {
+//     console.log("right");
+//     for (var i = 0; i < imageuris.length; i++) {
+//       var slide = new Slides.Slide();
+//       slide.className = "whitebackground";
+//       var imageElement = new ImageModule.Image();
+//       var cache = new imageCacheModule.Cache();
+//       cache.maxRequests = 5;
+//       var imgSource = imageSource.ImageSource;
+//       var url = imageuris[i];
+//       // Try to read the image from the cache
+//       var image = cache.get(url);
+//       if (image) {
+//         // If present -- use it.
+//         imgSource = imageSource.fromNativeSource(image);
+//         imageElement.imageSource = imgSource;
+//         console.log("cache");
+//       }
+//       else {
+//         // If not present -- request its download.
+//         cache.push({
+//           key: url,
+//           url: url,
+//           completed: function(image,key){
+//             if (url === key) {
+//               imgSource = imageSource.fromNativeSource(image);
+//               imageElement.imageSource = imgSource;
+//               console.log("online");
+//             }
+//           }
+//         });
+//       }
+//       slide.addChild(imageElement);
+//       slideContainer.addChild(slide);
+//     }
+//     slideContainer.loop = "true";
+//     slideContainer.disablePan = "true";
+//   }
+//   console.log(slideContainer._childrenCount);
+// };
+
 exports.onChanged = function(args){
-	var data = args.eventData;
-	console.log("Changed: " + JSON.stringify(data));
+  var data = args.eventData;
+  console.log("Changed: " + JSON.stringify(data));
+  currentSlide = data.newIndex;
+  console.log(currentSlide.toString());
 }

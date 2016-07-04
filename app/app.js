@@ -1,11 +1,11 @@
 var application = require("application");
-var fresco = require("nativescript-fresco");
+var imageCache = require("nativescript-web-image-cache");
 application.mainModule = "pages/login/login";
 application.cssFile = "pages/global.css";
 if (application.android) {
-  application.onLaunch = function (intent) {
-    fresco.initialize();
-  };
+    application.onLaunch = function (intent) {
+            imageCache.initialize();
+    };
 }
 try{
   application.start();

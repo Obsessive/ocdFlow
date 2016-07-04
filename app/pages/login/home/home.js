@@ -6,10 +6,9 @@ var observableArray = require("data/observable-array");
 var applicationSettings = require("application-settings");
 var animate = require("ui/animation");
 var Platform = require("platform");
-var Fresco = require("nativescript-fresco");
+var imageCache = require("nativescript-web-image-cache");
 var Slides = require("nativescript-slides/nativescript-slides");
-var ImageCacheIt = require("nativescript-image-cache-it");
-var page;
+var page,self;
 function homeLoaded(args) {
   page = args.object;
   var homeModel = (function (_super) {
@@ -27,7 +26,7 @@ page.bindingContext = new homeModel();
 exports.homeLoaded = homeLoaded;
 
 exports.homeUnLoaded = function(){
-
+  console.log("homeUnLoaded is activated");
 };
 
 exports.settings_action = function() {
@@ -37,20 +36,4 @@ exports.settings_action = function() {
     transition: {name:"slideTop"}
   };
   FrameModule.topmost().navigate(navigationEntry);
-};
-
-
-
-
-
-
-
-exports.speaker_item_tap = function(args){
-  console.log('Clicked item with index ' + args.index);
-
-};
-
-exports.tabViewNewsFeedUnLoaded = function(args){
-  console.log("tabViewNewsFeedUnLoaded is activated");
-
 };

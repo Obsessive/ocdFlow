@@ -1,4 +1,4 @@
-<StackLayout xmlns="http://schemas.nativescript.org/tns.xsd" xmlns:nativescript-fresco="nativescript-fresco" xmlns:collapsingHeader="nativescript-collapsing-header" xmlns:Slides="nativescript-slides" xmlns:td="nativescript-textdrawable" loaded="newsfeedLoaded" unloaded="newsfeedUnLoaded">
+<StackLayout xmlns="http://schemas.nativescript.org/tns.xsd"  xmlns:IC="nativescript-web-image-cache" xmlns:collapsingHeader="nativescript-collapsing-header" xmlns:Slides="nativescript-slides" xmlns:td="nativescript-textdrawable" loaded="newsfeedLoaded" unloaded="newsfeedUnLoaded">
   <collapsingHeader:CollapsingHeader>
     <collapsingHeader:Header class="header-template" id="header_id" >
       <GridLayout rows="auto" columns="*">

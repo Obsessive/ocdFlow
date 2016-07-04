@@ -1,4 +1,4 @@
-<Page xmlns="http://schemas.nativescript.org/tns.xsd" xmlns:nativescript-fresco="nativescript-fresco" xmlns:collapsingHeader="nativescript-collapsing-header" xmlns:Slides="nativescript-slides" xmlns:Card="nativescript-cardview" xmlns:td="nativescript-textdrawable" loaded="homeLoaded" unloaded="homeUnLoaded">
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" xmlns:collapsingHeader="nativescript-collapsing-header" xmlns:Slides="nativescript-slides" xmlns:Card="nativescript-cardview" xmlns:td="nativescript-textdrawable" loaded="homeLoaded" unloaded="homeUnLoaded">
   <ActionBar title="Ink Connect">
     <ActionItem tap="settings_action" icon="~/images/ic_settings_white_36dp.png" android.position="actionBar"></ActionItem>
   </ActionBar>
