@@ -93,7 +93,7 @@ function speakersLoaded(args) {
         "speaker_item_image":"http://image.shutterstock.com/z/stock-photo-beauty-portrait-of-young-smiling-girl-in-profile-with-blond-hair-isolated-on-white-background-115152049.jpg",
         "speaker_item_twitter_id":"@randomtwitterid",
         "speaker_item_position":"CEO at xyz"},
-        { "speaker_item_name":"ZEESHAN MOHAMMED",
+        { "speaker_item_name":"random guy again",
         "speaker_item_talk":"dummy speaker content",
         "speaker_item_image":"http://thumbs.dreamstime.com/z/beautiful-profile-face-young-woman-clean-fresh-skin-40988715.jpghttp://image.shutterstock.com/z/stock-photo-profile-of-beautiful-young-woman-s-face-with-clean-healthy-skin-56254405.jpg",
         "speaker_item_twitter_id":"@randomtwitterid",

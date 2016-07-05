@@ -1,5 +1,5 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" xmlns:collapsingHeader="nativescript-collapsing-header" xmlns:Slides="nativescript-slides" xmlns:Card="nativescript-cardview" xmlns:td="nativescript-textdrawable" loaded="homeLoaded" unloaded="homeUnLoaded">
-  <ActionBar title="Ink Connect">
+  <ActionBar title="INK Connect">
     <ActionItem tap="settings_action" icon="~/images/ic_settings_white_36dp.png" android.position="actionBar"></ActionItem>
   </ActionBar>
   <TabView class="whitetext fontsymbol font20" id="tab_view_id" selectedColor="#FFFFFF" tabsBackgroundColor="#21409A">

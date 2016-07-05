@@ -61,15 +61,15 @@ function newsfeedLoaded(args) {
         "news_feed_item_content":"Yes.. It's work in progress",
         "news_feed_item_day_time":"1 JULY 2016 at 2:33 PM"},
         { "news_feed_item_speaker_icon":"ZM",
-        "news_feed_item_speaker_name":"Zeeshan Mohammed",
+        "news_feed_item_speaker_name":"Random Guy 3",
         "news_feed_item_content":"Post to feed feature is still to come",
         "news_feed_item_day_time":"1 JULY 2016 at 2:34 PM"},
         { "news_feed_item_speaker_icon":"RG",
-        "news_feed_item_speaker_name":"Random Guy 3",
+        "news_feed_item_speaker_name":"Random Guy 4",
         "news_feed_item_content":"You guys are awesome",
         "news_feed_item_day_time":"1 JULY 2016 at 2:35 PM"},
         { "news_feed_item_speaker_icon":"RG",
-        "news_feed_item_speaker_name":"Random Guy 4",
+        "news_feed_item_speaker_name":"Random Guy 5",
         "news_feed_item_content":"We should meet",
         "news_feed_item_day_time":"1 JULY 2016 at 2:36 PM"}
       ]);

@@ -1,5 +1,5 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" xmlns:td="nativescript-textdrawable" loaded="profileLoaded" unloaded="profileUnLoaded">
-  <ActionBar title="Ink Connect">
+  <ActionBar title="INK Connect">
 
   </ActionBar>
 </Page>

@@ -32,15 +32,15 @@ function chatLoaded(args) {
         "chat_item_content":"It is rocking!!!",
         "chat_item_date_day":"1 JULY 2016 2:33 PM"},
         { "chat_item_icon_text":"ZM",
-        "chat_item_name":"ZEESHAN MOHAMMED",
+        "chat_item_name":"random guy 3",
         "chat_item_content":"dummy content",
         "chat_item_date_day":"1 JULY 2016 2:34 PM"},
         { "chat_item_icon_text":"RG",
-        "chat_item_name":"random guy 3",
+        "chat_item_name":"random guy 4",
         "chat_item_content":"You guys are awesome",
         "chat_item_date_day":"1 JULY 2016 2:35 PM"},
         { "chat_item_icon_text":"RG",
-        "chat_item_name":"random guy 4",
+        "chat_item_name":"random guy 5",
         "chat_item_content":"We should meet",
         "chat_item_date_day":"1 JULY 2016 2:36 PM"}
       ]);
