@@ -9,7 +9,8 @@
       <TextField row="1" col="0" hint="Password" id="password_id" secure="true" class="font22 margintop10 marginleft10 marginright10 blacktext"/>
       <Button row="2" col="0" tap="{{ login_action }}" text="LOGIN" class="margin10 border5 font22 whitetext themebackground"/>
       <Label row="3" col="0" id="terms_of_use_id" text="Terms Of Use" class="margin10 positioncenter textcenter font18 blacktext"/>
-      <Label row="5" col="0" id="trouble_logging_id" text="Having Trouble Logging in?" class="margin10 positioncenter textcenter font20 blacktext"/>
+      <!-- <Label row="5" col="0" id="trouble_logging_id" text="Having Trouble Logging in?" class="margin10 positioncenter textcenter font20 blacktext"/> -->
+      <Label row="5" col="0" id="not_a_member_id" tap="{{ register_action }}" text="Not a member?" class="margin10 positioncenter textcenter font20 blacktext"/>
     </GridLayout>
   </GridLayout>
 </Page>

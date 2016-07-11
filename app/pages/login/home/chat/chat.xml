@@ -1,4 +1,4 @@
-<GridLayout rows="*,auto" columns="*" class="graybackground" xmlns="http://schemas.nativescript.org/tns.xsd" xmlns:td="nativescript-textdrawable" loaded="chatLoaded" unloaded="chatUnLoaded">
+<GridLayout rows="*,auto" columns="*" class="graybackground" xmlns="http://schemas.nativescript.org/tns.xsd" loaded="chatLoaded" unloaded="chatUnLoaded">
   <ListView row="0" col="0" id="chat_id" items="{{ chat_items }}" itemTap="chat_item_tap" separatorColor="#00FFFFFF" >
     <ListView.itemTemplate>
       <GridLayout rows="10,auto" columns="auto,*" class="graybackground">
@@ -6,11 +6,13 @@
         </StackLayout>
         <StackLayout row="0" col="0" rowspan="2" class="width3 whitebackground">
         </StackLayout>
-        <td:TextDrawable row="1" col="0" width="65" height="65" text="{{ chat_item_icon_text }}" textColor="white" toUpperCase="true" type="round" bgColor="#21409A" class="marginleft10 marginright10 verticaltop horizontalcenter"/>
+        <GridLayout rows="*,auto,*" columns="*,auto,*" row="1" col="0" width="70" height="70" class="themebackground border35 marginleft10 marginright10 verticaltop horizontalcenter">
+          <Label row="1" col="1" textWrap="true" text="{{ chat_item_icon_text }}" class="font34 whitetext positioncenter"/>
+        </GridLayout>
         <GridLayout rows="auto,auto,auto" columns="*" row="1" col="1" class="whitebackground border5 marginright5">
-          <Label id="chat_item_name_id" textWrap="true" row="0" col="0" text="{{ chat_item_name }}" class="marginleft5 graytext font14 horizontalleft verticaltop margintop5 font-helvetica" />
+          <Label id="chat_item_name_id" textWrap="true" row="0" col="0" text="{{ chat_item_name }}" class="marginleft5 graytext font16 horizontalleft verticaltop margintop5 font-helvetica" />
           <Label id="chat_item_content_id" textWrap="true" row="1" col="0" text="{{ chat_item_content }}" class="margin5 blacktext font24 font-helvetica" />
-          <Label id="chat_item_date_day_id" textWrap="true" row="2" col="0" text="{{ chat_item_date_day }}" class="graytext font10 horizontalright verticalbottom marginright5 marginbottom5 font-helvetica" />
+          <Label id="chat_item_date_day_id" textWrap="true" row="2" col="0" text="{{ chat_item_date_day }}" class="graytext font12 horizontalright verticalbottom marginright5 marginbottom5 font-helvetica" />
         </GridLayout>
       </GridLayout>
     </ListView.itemTemplate>

@@ -54,6 +54,18 @@ ActionBar{
   background-color: transparent;
 }
 
+.twitterbackground{
+  background-color: #4099FF;
+}
+
+.callgreenbackground{
+  background-color: #34bf49;
+}
+
+.mailredbackground{
+  background-color: #ff4c4c;
+}
+
 .blackbackground{
   background-color: #000000;
 }
@@ -256,8 +268,20 @@ ActionBar{
   font-weight: bold;
 }
 
+.border35 {
+    border-radius: 35;
+}
+
+.border75 {
+    border-radius: 75;
+}
+
 .border50 {
     border-radius: 50;
+}
+
+.border10 {
+    border-radius: 10;
 }
 
 .border5 {
@@ -287,6 +311,14 @@ ActionBar{
   font-family: FontAwesome;
 }
 
+.textleft{
+  text-align: left;
+}
+
+.textright{
+  text-align: right;
+}
+
 .textcenter{
   text-align: center;
 }
@@ -303,6 +335,10 @@ ActionBar{
 
 .paddingleft12{
   padding-left: 12;
+}
+
+.paddingleft10{
+  padding-left: 10;
 }
 
 /*others*/

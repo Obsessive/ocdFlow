@@ -1,0 +1,35 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" class="graybackground" xmlns:Card="nativescript-cardview" xmlns:IC="nativescript-web-image-cache" xmlns:td="nativescript-textdrawable" loaded="detailsLoaded" unloaded="detailsUnLoaded">
+  <ActionBar title="INK Connect">
+
+  </ActionBar>
+  <ScrollView>
+    <StackLayout>
+      <Card:CardView class="" margin="10" elevation="40" radius="5">
+        <GridLayout rows="auto,20,200,auto" columns="*,200,*">
+          <Label row="0" col="0" colspan="3" text="{{ details_speaker_name }}" class="boldtext positioncenter blacktext font28 font-helvetica margintop10 marginleft15 marginright15" textWrap="true"/>
+          <GridLayout row="2" col="0" colspan="3" rows="auto,*" columns="*,*" class="">
+            <Label row="0" col="0" text="{{ details_speaker_icon_text }}" class="marginleft5 paddingleft10 whitetext font24 textleft border5 themebackground"/>
+          </GridLayout>
+          <StackLayout row="2" col="1" class="border50">
+            <IC:WebImage stretch="fill" width="200" height="200" class="positioncenter border50" src="{{ details_speaker_image }}">
+            </IC:WebImage>
+          </StackLayout>
+          <Label row="3" col="0" colspan="3" text="{{ details_speaker_position }}" class="positioncenter blacktext font22 font-helvetica marginbottom10 marginleft15 marginright15" textWrap="true"/>
+        </GridLayout>
+      </Card:CardView>
+      <Card:CardView class="" margin="10" elevation="40" radius="5">
+        <StackLayout class="">
+          <Label text="{{ details_speaker_talk_title }}" class="boldtext positioncenter blacktext font26 font-helvetica marginleft15 marginright15 margintop10" textWrap="true"/>
+          <Label text="{{ details_speaker_talk_details }}" class="positioncenter blacktext font20 font-helvetica marginleft15 marginright15 marginbottom10" textWrap="true"/>
+        </StackLayout>
+      </Card:CardView>
+      <Card:CardView class="" margin="10" elevation="40" radius="5">
+        <GridLayout rows="auto" columns="*,*,*" class="">
+          <Button row="0" col="0" text="&#xf095;" tap="{{ details_call_action }}" class="fontsymbol font24 margintop10 marginbottom10 marginleft10 marginright5 whitetext border5 callgreenbackground"/>
+          <Button row="0" col="1" text="&#xf0e0;" tap="{{ details_mail_action }}" class="fontsymbol font24 margintop10 marginbottom10 marginleft5 marginright5 whitetext border5 mailredbackground"/>
+          <Button row="0" col="2" text="&#xf099;" tap="{{ details_twitter_action }}" class="fontsymbol font24 margintop10 marginbottom10 marginleft5 marginright10 whitetext twitterbackground border5"/>
+        </GridLayout>
+      </Card:CardView>
+    </StackLayout>
+  </ScrollView>
+</Page>

@@ -1,5 +1,5 @@
 <StackLayout class="whitebackground" xmlns="http://schemas.nativescript.org/tns.xsd" loaded="scheduleLoaded" unloaded="scheduleUnLoaded">
-  <ListView id="schedule_id" items="{{ schedule_items }}" itemTap="schedule_item_tap" separatorColor="#00595959" >
+  <ListView id="schedule_id" items="{{ schedule_items }}" loadMoreItemsEvent="schedule_load_more_event" itemTap="schedule_item_tap" separatorColor="#00595959" >
     <ListView.itemTemplate>
       <GridLayout rows="auto,auto" columns="*">
         <StackLayout row="0" col="0" class="themebackground opacity90">

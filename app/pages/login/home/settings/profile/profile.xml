@@ -1,5 +1,33 @@
-<Page xmlns="http://schemas.nativescript.org/tns.xsd" xmlns:td="nativescript-textdrawable" loaded="profileLoaded" unloaded="profileUnLoaded">
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" loaded="profileLoaded" unloaded="profileUnLoaded">
   <ActionBar title="INK Connect">
 
   </ActionBar>
+  <StackLayout>
+    <GridLayout rows="auto" columns="*,auto,*" class="themebackground">
+      <Label row="0" col="1" textWrap="true" id="profile_icon_text_id" text="PROFILE" class="positioncenter whitetext font34 textcenter"/>
+      <Label row="0" col="2" textWrap="true" text="{{ edit_done_toggle }}" tap="{{ profil_edit_action }}" class="horizontalright verticalcenter whitetext font34 textcenter fontsymbol marginright10"/>
+    </GridLayout>
+    <ScrollView>
+      <GridLayout id="profile_rest_id" rows="auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto" columns="*,auto" class="margintop15">
+        <Label row="0" col="0" text="FIRST NAME" class="whitebackground graytext font26 marginleft5 font-helvetica"/>
+        <Label row="0" col="1" tap="{{ first_name_edit_action }}" text="&#xf040;" visibility="{{ editpage==true ? 'visible' : 'collapse' }}" class="whitebackground graytext font26 marginright10 fontsymbol"/>
+        <TextView colspan="2" id="first_name_edit_id" row="1" col="0" editable="false" hint="FIRST NAME" text="{{ profile_first_name }}" class="whitebackground blacktext font-helvetica font24"/>
+        <Label row="2" col="1" tap="{{ last_name_edit_action }}" text="&#xf040;" visibility="{{ editpage==true ? 'visible' : 'collapse' }}" class="whitebackground graytext font26 marginright10 fontsymbol"/>
+        <Label row="2" col="0" text="LAST NAME" class="whitebackground graytext font26 marginleft5 font-helvetica"/>
+        <TextView colspan="2" id="last_name_edit_id" row="3" col="0" editable="false" hint="LAST NAME" text="{{ profile_last_name }}" class="whitebackground blacktext font-helvetica font24"/>
+        <Label row="4" col="0" text="POSITION" class="whitebackground graytext font26 marginleft5 font-helvetica"/>
+        <Label row="4" col="1" tap="{{ position_edit_action }}" text="&#xf040;" visibility="{{ editpage==true ? 'visible' : 'collapse' }}" class="whitebackground graytext font26 marginright10 fontsymbol"/>
+        <TextView colspan="2" id="position_edit_id" row="5" col="0" editable="false" hint="POSITION" text="{{ profile_position }}" class="whitebackground blacktext font-helvetica font24"/>
+        <Label row="6" col="0" text="EMAIL" class="whitebackground graytext font26 marginleft5 font-helvetica"/>
+        <Label row="6" col="1" tap="{{ email_edit_action }}" text="&#xf040;" visibility="{{ editpage==true ? 'visible' : 'collapse' }}" class="whitebackground graytext font26 marginright10 fontsymbol"/>
+        <TextView colspan="2" id="email_edit_id" row="7" col="0" editable="false" hint="EMAIL" text="{{ profile_email }}" class="whitebackground blacktext font-helvetica font24"/>
+        <Label row="8" col="0" text="PHONE" class="whitebackground graytext font26 marginleft5 font-helvetica"/>
+        <Label row="8" col="1" tap="{{ phone_edit_action }}" text="&#xf040;" visibility="{{ editpage==true ? 'visible' : 'collapse' }}" class="whitebackground graytext font26 marginright10 fontsymbol"/>
+        <TextView colspan="2" id="phone_edit_id" row="9" col="0" editable="false" hint="PHONE" text="{{ profile_phone }}" class="whitebackground blacktext font-helvetica font24"/>
+        <Label row="10" col="0" text="ABOUT ME" class="whitebackground graytext font26 marginleft5 font-helvetica"/>
+        <Label row="10" col="1" tap="{{ about_me_edit_action }}" text="&#xf040;" visibility="{{ editpage==true ? 'visible' : 'collapse' }}" class="whitebackground graytext font26 marginright10 fontsymbol"/>
+        <TextView colspan="2" id="about_me_edit_id" row="11" col="0" editable="false" hint="Tell us about yourself" text="{{ profile_about_me }}" class="whitebackground blacktext font-helvetica font24"/>
+      </GridLayout>
+    </ScrollView>
+  </StackLayout>
 </Page>

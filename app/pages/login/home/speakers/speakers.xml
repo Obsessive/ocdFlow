@@ -2,21 +2,21 @@
   <ListView id="speaker_id" items="{{ speaker_items }}" itemTap="speaker_item_tap" separatorColor="#00FFFFFF" >
     <ListView.itemTemplate>
       <Card:CardView class="" margin="10" elevation="40" radius="5">
-        <GridLayout rows="10,100,auto,auto,auto,auto" columns="*,100,*">
-          <GridLayout rows="*,auto,*" columns="*,auto,*" row="1" col="1" class="imagegraybackground border50">
-            <Label row="1" col="1" text="&#xf007;" class="fontsymbol font64 positioncenter imagegraytext" />
+        <GridLayout rows="10,150,auto,auto,auto,auto" columns="*,150,*">
+          <GridLayout rows="*,auto,*" columns="*,auto,*" row="1" col="1" class="imagegraybackground border75">
+            <Label row="1" col="1" text="&#xf007;" class="fontsymbol font64 positioncenter imagegraytext marginbottom10" />
           </GridLayout>
-          <StackLayout row="1" col="1" class="border50">
-            <IC:WebImage stretch="fill" width="100" height="100" class="positioncenter border50" src="{{ speaker_item_image }}">
+          <StackLayout row="1" col="1" class="">
+            <IC:WebImage stretch="fill" width="150" height="150" class="positioncenter border50" src="{{ speaker_item_image }}">
             </IC:WebImage>
           </StackLayout>
-          <Label row="2" col="0" colspan="3" textWrap="true" class="font20 blacktext textcenter marginbottom10 marginleft10 marginright10 font-helvetica" text="{{ speaker_item_position }}" />
-          <Label row="3" col="0" colspan="3" textWrap="true" class="font24 themetext textcenter marginleft10 marginright10 font-helvetica" text="{{ speaker_item_name }}" />
+          <Label row="2" col="0" colspan="3" textWrap="true" class="positioncenter font20 blacktext textcenter marginbottom10 marginleft10 marginright10 margintop10 font-helvetica" text="{{ speaker_item_position }}" />
+          <Label row="3" col="0" colspan="3" textWrap="true" class="positioncenter font24 themetext textcenter marginleft10 marginright10 font-helvetica" text="{{ speaker_item_name }}" />
           <StackLayout row="4" col="0" colspan="3" class="positioncenter margintop5" orientation="horizontal">
             <Label textWrap="true" class="font24 twittertext textcenter marginbottom10 fontsymbol marginleft10" text="&#xf099;" />
             <Label textWrap="true" class="font18 twittertext textcenter marginbottom10 marginright10 font-helvetica" text="{{ speaker_item_twitter_id }}" tap="twitter_handler_action"/>
           </StackLayout>
-          <Label row="5" col="0" colspan="3" textWrap="true" class="font20 graytext textcenter marginbottom10 marginleft10 marginright10 font-helvetica" text="{{ speaker_item_talk }}" />
+          <Label row="5" col="0" colspan="3" textWrap="true" class="positioncenter font20 graytext textcenter marginbottom10 marginleft10 marginright10 font-helvetica" text="{{ speaker_item_talk }}" />
         </GridLayout>
       </Card:CardView>
     </ListView.itemTemplate>

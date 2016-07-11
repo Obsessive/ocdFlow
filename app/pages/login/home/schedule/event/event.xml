@@ -2,4 +2,7 @@
   <ActionBar title="Ink Connect">
 
   </ActionBar>
+  <ScrollView>
+    
+  </ScrollView>
 </Page>
